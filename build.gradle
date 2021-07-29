@@ -25,6 +25,9 @@ bootJar {
 }
 
 configurations {
+    compileClasspath {
+        resolutionStrategy.activateDependencyLocking()
+    }
     all {
         exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
     }
